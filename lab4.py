@@ -1,10 +1,12 @@
 import streamlit as st
 # Đọc file
 st.title("Đọc file")
-file = 'cucainho.txt'
-with open(file=file, mode='r', encoding='utf-8') as f:
-    noi_dung = f.read()
-st.write(noi_dung)
+file = st.file_uploader("Tải lên tệp văn bản")
+if file is not None:
+    noi_dung = file.read().decode("utf-8")
+    so_tu = len(noi_dung)
+    st.write("Nội dung tệp:\n", noi_dung)
+    st.write(f"Số lượng từ trong tệp \n: {so_tu} từ \n")
 # Đếm từ
 st.title("Đếm từ")
 dem_tu = {}

@@ -13,7 +13,6 @@ dem_tu = {}
 for tu in noi_dung.split():
     dem_tu[tu] = dem_tu.get(tu, 0) + 1
 st.write("Số lần xuất hiện:\n", dem_tu)
-st.write("Tổng số từ: ",len(noi_dung.split()))
 # Thay thế
 st.title("Thay thế từ trong chuỗi")
 tu_can_thay = st.text_input("Nhập từ cần thay thế:\n")
